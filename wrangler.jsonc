@@ -1,0 +1,16 @@
+{
+  "name": "pawnshop",
+  "main": "./workers/app.ts",
+  "compatibility_date": "2025-03-01",
+  "compatibility_flags": ["nodejs_compat"],
+  "assets": {
+    "directory": "./build/client"
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "pawnshop",
+      "database_id": "79d7fc2b-5c60-4780-84f4-920efa155f23"
+    }
+  ]
+}

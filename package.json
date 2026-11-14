@@ -1,0 +1,35 @@
+{
+  "name": "pawnshop",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "react-router dev",
+    "build": "react-router build",
+    "start": "wrangler dev",
+    "deploy": "npm run build && wrangler deploy",
+    "db:create": "wrangler d1 create pawnshop",
+    "db:migrate": "wrangler d1 execute pawnshop --file=./app/db/schema.sql",
+    "db:migrate:local": "wrangler d1 execute pawnshop --local --file=./app/db/schema.sql",
+    "db:seed": "wrangler d1 execute pawnshop --file=./app/db/seed.sql",
+    "db:seed:local": "wrangler d1 execute pawnshop --local --file=./app/db/seed.sql",
+    "typegen": "react-router typegen && wrangler types"
+  },
+  "dependencies": {
+    "@react-router/node": "^7.2.0",
+    "@react-router/serve": "^7.2.0",
+    "isbot": "^5.1.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-router": "^7.2.0"
+  },
+  "devDependencies": {
+    "@cloudflare/vite-plugin": "^1.0.0",
+    "@react-router/dev": "^7.2.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "typescript": "^5.7.0",
+    "vite": "^6.1.0",
+    "vite-tsconfig-paths": "^5.1.0",
+    "wrangler": "^4.0.0"
+  }
+}
